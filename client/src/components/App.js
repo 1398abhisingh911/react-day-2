@@ -32,7 +32,7 @@ class App extends Component {
               <List
                 WeatherAppContents={WeatherAppContents}
                 SelectedDay={this.state.SelectedDay}
-                handleSelectedDayClick={this.state.handleSelectedDayClick}
+                handleSelectedDayClick={this.handleSelectedDayClick}
               />
             </div>
             <div className="col-8">
