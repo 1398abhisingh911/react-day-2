@@ -1,11 +1,11 @@
 import React from "react";
 import { DaysAgo, Weeks } from "../../constants/Dates";
 
-const ListItem = ({ CurDate, Selected }) => {
+const ListItem = ({ CurDate, Selected, handleSelectedDayClick, index }) => {
   const today = new Date().getDate();
   return (
-    <a
-      href="#"
+    <span
+      onClick={() => handleSelectedDayClick()}
       className={
         "list-group-item list-group-item-action" +
         (CurDate === today ? " list-group-item-success" : "") +
@@ -25,7 +25,7 @@ const ListItem = ({ CurDate, Selected }) => {
         }
       </p>
       <small>And some small print.</small>
-    </a>
+    </span>
   );
 };
 
