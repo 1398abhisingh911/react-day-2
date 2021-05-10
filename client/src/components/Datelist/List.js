@@ -9,7 +9,7 @@ const List = ({ WeatherAppContents, SelectedDay }) => {
           <ListItem
             CurDate={curr.Date}
             key={key}
-            Selected={SelectedDay === key}
+            Selected={+SelectedDay === key}
           />
         ))}
       </div>
