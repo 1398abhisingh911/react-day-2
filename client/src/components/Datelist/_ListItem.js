@@ -5,7 +5,7 @@ const ListItem = ({ CurDate, Selected, handleSelectedDayClick, index }) => {
   const today = new Date().getDate();
   return (
     <span
-      onClick={() => handleSelectedDayClick()}
+      onClick={() => handleSelectedDayClick(index)}
       className={
         "list-group-item list-group-item-action" +
         (CurDate === today ? " list-group-item-success" : "") +
