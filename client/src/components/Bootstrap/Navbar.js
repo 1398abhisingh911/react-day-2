@@ -1,10 +1,18 @@
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({ dark, children, className }) => {
   return (
-    <nav className="navbar navbar-light bg-light">
-      <span className="navbar-brand mb-0 h1">Navbar</span>
-    </nav>
+    (dark = !!dark ? "dark" : "light"),
+    (
+      <nav
+        className={
+          `navbar navbar-${dark} bg-${dark}` +
+          (className ? " " + className : "")
+        }
+      >
+        <span className="navbar-brand mb-0 h1">{children}</span>
+      </nav>
+    )
   );
 };
 
